@@ -1,0 +1,1 @@
+This is a minimal application configuration using Spring Boot and systemjs
