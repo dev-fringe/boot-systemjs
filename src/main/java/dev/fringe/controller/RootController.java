@@ -13,9 +13,14 @@ public class RootController {
     private String message = "Hello World";
 
     @RequestMapping("/")
-    String root(Map<String, Object> model) {
+    String root() {
+        return "welcome";
+    }
+
+    @RequestMapping("/template")
+    String data(Map<String, Object> model) {
         model.put("time", new Date());
         model.put("message", this.message);
-        return "welcome";
+        return "template";
     }
 }

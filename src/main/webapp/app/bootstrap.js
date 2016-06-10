@@ -2,5 +2,7 @@ import $ from 'jquery';
 import fit from 'davatron5000/FitText.js';
 
 export function bootstrap() {
-  // bootstrap code here
+  $.get("template", function(data, status){
+      $( "#view" ).html(data);
+   });
 }
