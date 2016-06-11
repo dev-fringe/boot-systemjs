@@ -14,7 +14,7 @@ Backend
 - mustache - template
 - spring mvc - versioning, rest
 - scala (in progress) - functional programming
-- akka (in progress) - async
+- akka (in progress) - concurrent and distributed systems
 
  
 Frontend
