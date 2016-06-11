@@ -1,7 +1,7 @@
 # This is a minimal archtype webpp using javaEE and npm enviroment
 
 ## Project build and packaging 
-maven
+### maven
 - frontend plugin - npm build
 
 npm
