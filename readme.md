@@ -4,12 +4,12 @@
 ### maven
 - frontend plugin - npm build
 
-npm
+### npm
 - jspm - package
 - gulp (in progress) - minify web resource 
 
 ## Frameworks 
-Backend
+### Backend
 - spring boot - micro, j2ee, container
 - mustache - template
 - spring mvc - versioning, rest
@@ -17,7 +17,7 @@ Backend
 - akka (in progress) - concurrent and distributed systems
 
  
-Frontend
+### Frontend
 - traucer - es6
 - jQuery
 - FitText - mobile
