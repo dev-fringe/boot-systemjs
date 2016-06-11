@@ -5,6 +5,6 @@
   - npm : jspm(package), gulp(minify web resource - in progress)
 
 ## Frameworks
-  - Backend side : spring boot(micro, j2ee, container), mustache(template), spring mvc(versioning, rest), scala (funcational - in progress), akka (async - in progress), jpa(model - in progress) 
+  - Backend side : spring boot(micro, j2ee, container), mustache(template), spring mvc(versioning, rest), scala (functional programming - in progress), akka (async - in progress), jpa(model - in progress) 
   - Frontend side : traucer(es6), jQuery, FitText(mobile)
 
