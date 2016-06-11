@@ -2,23 +2,25 @@
 
 ## Project build
 maven :
-- frontend plugin ( npm build )
+- frontend plugin - npm build
+
 ## Packaging web
 npm : 
-- jspm ( package )
-- gulp ( minify web resource - in progress )
+- jspm - package
+- gulp - minify web resource 
 
 ## Frameworks 
 Backend :
-- spring boot ( micro, j2ee, container )
-- mustache ( template )
-- spring mvc ( versioning, rest )
-- scala ( functional programming - in progress )
-- akka ( async - in progress )
+- spring boot - micro, j2ee, container
+- mustache - template
+- spring mvc - versioning, rest
+- scala - functional programming - in progress
+- akka - async - in progress
+
 ## Frameworks 
 Frontend : 
-- traucer ( es6 )
+- traucer - es6
 - jQuery
-- FitText ( mobile )
+- FitText - mobile
 
 ## Further, i will use Spring Cloud Netflix or enterprise archtecture, if necessary
