@@ -4,17 +4,19 @@
 maven :
 - frontend plugin ( npm build )
 ## Packaging web
- npm : 
+npm : 
 - jspm ( package )
 - gulp ( minify web resource - in progress )
 
-## Frameworks Backend
+## Frameworks 
+Backend :
 - spring boot ( micro, j2ee, container )
 - mustache ( template )
 - spring mvc ( versioning, rest )
 - scala ( functional programming - in progress )
 - akka ( async - in progress )
-## Frameworks Frontend
+## Frameworks 
+Frontend : 
 - traucer ( es6 )
 - jQuery
 - FitText ( mobile )
