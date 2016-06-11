@@ -6,15 +6,15 @@ maven
 
 npm
 - jspm - package
-- gulp(in progress) - minify web resource 
+- gulp (in progress) - minify web resource 
 
 ## Frameworks 
 Backend
 - spring boot - micro, j2ee, container
 - mustache - template
 - spring mvc - versioning, rest
-- scala(in progress) - functional programming - in progress
-- akka(in progress) - async - in progress
+- scala (in progress) - functional programming - in progress
+- akka (in progress) - async - in progress
 
  
 Frontend
