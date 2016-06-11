@@ -1,20 +1,20 @@
 # This is a minimal archtype webpp using javaEE and npm enviroment
 
-## Packaging and build
+## Project build
 maven :
 - frontend plugin ( npm build )
-npm : 
+## Packaging web
+ npm : 
 - jspm ( package )
 - gulp ( minify web resource - in progress )
 
-## Frameworks
-Backend side :
+## Frameworks Backend
 - spring boot ( micro, j2ee, container )
 - mustache ( template )
 - spring mvc ( versioning, rest )
 - scala ( functional programming - in progress )
 - akka ( async - in progress )
-Frontend side :
+## Frameworks Frontend
 - traucer ( es6 )
 - jQuery
 - FitText ( mobile )
