@@ -18,8 +18,6 @@
     },
     "dependencies": {
       "davatron5000/FitText.js": "github:davatron5000/FitText.js@^1.2.0",
-      "history": "npm:history@^3.0.0",
-      "history-events": "npm:history-events@^1.0.4",
       "joequery/Stupid-Table-Plugin": "github:joequery/Stupid-Table-Plugin@^1.0.1",
       "jquery": "github:components/jquery@^2.1.3",
       "xpepermint/history-events": "github:xpepermint/history-events@^1.0.4"
