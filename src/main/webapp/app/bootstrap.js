@@ -1,8 +1,11 @@
 import $ from 'jquery';
-import fit from 'davatron5000/FitText.js';
+import 'davatron5000/FitText.js';
+import 'joequery/Stupid-Table-Plugin';
 
 export function bootstrap() {
-  $.get("template", function(data, status){
-      $( "#view" ).html(data);
-   });
+    console.log($.fn);
+    $.get("template", function(data){
+        $("#view").html(data);
+        $("table").stupidtable();
+    });
 }
