@@ -15,7 +15,7 @@
 - spring mvc - versioning, rest
 - scala (in progress) - functional programming
 - akka (in progress) - concurrent and distributed systems
-
+- atmosphere - websocket (8.10) 
  
 ### Frontend
 - traucer - es6
