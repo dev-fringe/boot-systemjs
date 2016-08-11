@@ -14,7 +14,7 @@ import java.util.Collections;
 
 @Configuration
 @EnableAutoConfiguration
-public abstract class AtmosphereSupportConfigutration {
+public abstract class AtmosphereConfig {
     @Bean
     public EmbeddedAtmosphereInitializer atmosphereInitializer() {
         return new EmbeddedAtmosphereInitializer();

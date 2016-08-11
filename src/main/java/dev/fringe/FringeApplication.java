@@ -1,10 +1,12 @@
 package dev.fringe;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import java.util.Arrays;
 
-public class FringeApplication extends AtmosphereSpringSupport {
+@SpringBootApplication
+public class FringeApplication extends AtmosphereConfig {
 
 	public static void main(String[] args) throws Exception {
 		ApplicationContext ctx = SpringApplication.run(FringeApplication.class, args);
