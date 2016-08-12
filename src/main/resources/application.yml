@@ -3,7 +3,7 @@ server:
 ---
 spring:
   application:
-    name: user
+    name: say-hello
 
 application:
   message: Hello, Kevin
@@ -11,6 +11,6 @@ application:
 say-hello:
   ribbon:
     eureka:
-      enabled: false
-    listOfServers: localhost:8090,localhost:9092,localhost:9999
+      enabled: true
+    listOfServers: localhost:9000,localhost:9092,localhost:9999
     ServerListRefreshInterval: 15000

@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RibbonClient(name = "say-hello", configuration = RibbonConfig.class)
-public class RibbonController {
+public class LoadBalancedController {
 
     @LoadBalanced
     @Bean
