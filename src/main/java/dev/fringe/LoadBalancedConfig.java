@@ -1,14 +1,17 @@
 package dev.fringe;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import com.netflix.client.config.IClientConfig;
+import com.netflix.loadbalancer.AvailabilityFilteringRule;
 import com.netflix.loadbalancer.IPing;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.PingUrl;
-import com.netflix.loadbalancer.AvailabilityFilteringRule;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 
-public class RibbonConfig {
+/**
+ * Created by v.hdlee on 2016-08-12.
+ */
+public class LoadBalancedConfig {
 
     @Autowired
     IClientConfig ribbonClientConfig;
@@ -22,5 +25,4 @@ public class RibbonConfig {
     public IRule ribbonRule(IClientConfig config) {
         return new AvailabilityFilteringRule();
     }
-
 }
