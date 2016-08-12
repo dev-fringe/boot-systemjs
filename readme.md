@@ -16,7 +16,8 @@
 - scala (in progress) - functional programming
 - akka (in progress) - concurrent and distributed systems
 - atmosphere - websocket (8.10) 
-- jersey - wadl
+~~- jersey - wadl~~
+- swagger2 - api doc
  
 ### Frontend
 - traucer - es6

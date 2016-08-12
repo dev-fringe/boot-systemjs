@@ -1,19 +1,3 @@
-/*
- * Copyright 2012-2015 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package dev.fringe.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -42,19 +26,16 @@ public class MessageService {
 
     @Disconnect
     public void onDisconnect(AtmosphereResourceEvent event) {
-        this.logger.info("Client {} disconnected [{}]", event.getResource().uuid(),
-                (event.isCancelled() ? "cancelled" : "closed"));
+        this.logger.info("Client {} disconnected [{}]", event.getResource().uuid(),(event.isCancelled() ? "cancelled" : "closed"));
     }
 
     @org.atmosphere.config.service.Message(encoders = JacksonEncoderDecoder.class, decoders = JacksonEncoderDecoder.class)
     public Message onMessage(Message message) throws IOException {
-        this.logger.info("Author {} sent message {}", message.getAuthor(),
-                message.getMessage());
+        this.logger.info("Author {} sent message {}", message.getAuthor(),message.getMessage());
         return message;
     }
 
-    public static class JacksonEncoderDecoder implements Encoder<Message, String>,
-            Decoder<String, Message> {
+    public static class JacksonEncoderDecoder implements Encoder<Message, String>, Decoder<String, Message> {
 
         private final ObjectMapper mapper = new ObjectMapper();
 
@@ -62,8 +43,7 @@ public class MessageService {
         public String encode(Message m) {
             try {
                 return this.mapper.writeValueAsString(m);
-            }
-            catch (IOException ex) {
+            }catch (IOException ex) {
                 throw new IllegalStateException(ex);
             }
         }
@@ -72,8 +52,7 @@ public class MessageService {
         public Message decode(String s) {
             try {
                 return this.mapper.readValue(s, Message.class);
-            }
-            catch (IOException ex) {
+            }catch (IOException ex) {
                 throw new IllegalStateException(ex);
             }
         }

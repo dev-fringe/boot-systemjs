@@ -1,0 +1,16 @@
+server:
+  port: 9000
+---
+spring:
+  application:
+    name: user
+
+application:
+  message: Hello, Kevin
+
+say-hello:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8090,localhost:9092,localhost:9999
+    ServerListRefreshInterval: 15000
