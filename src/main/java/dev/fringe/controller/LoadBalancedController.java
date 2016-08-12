@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RibbonClient(name = "say-hello", configuration = LoadBalancedConfig.class)
+@RibbonClient(name="fringe", configuration = LoadBalancedConfig.class)
 public class LoadBalancedController {
 
     @LoadBalanced
@@ -25,7 +25,7 @@ public class LoadBalancedController {
 
     @RequestMapping("/hi")
     public String hi(@RequestParam(value="name", defaultValue="Artaban") String name) {
-        String greeting = this.restTemplate.getForObject("http://say-hello/greeting", String.class);
+        String greeting = this.restTemplate.getForObject("http://fringe/greeting", String.class);
         return String.format("%s, %s!", greeting, name);
     }
 }

@@ -1,6 +1,5 @@
 server:
   port: 9000
----
 spring:
   application:
     name: say-hello
@@ -8,9 +7,25 @@ spring:
 application:
   message: Hello, Kevin
 
-say-hello:
+fringe:
   ribbon:
     eureka:
       enabled: true
-    listOfServers: localhost:9000,localhost:9092,localhost:9999
+    listOfServers: localhost:9001,localhost:9002,localhost:9003
     ServerListRefreshInterval: 15000
+---
+spring:
+    profiles: one
+server:
+    port: 9001
+---
+spring:
+    profiles: two
+server:
+    port: 9002
+---
+spring:
+    profiles: three
+server:
+    port: 9003
+---

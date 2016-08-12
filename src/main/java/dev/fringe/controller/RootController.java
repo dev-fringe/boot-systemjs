@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.*;
 
+
 @Controller
 public class RootController {
 
@@ -25,9 +26,13 @@ public class RootController {
         return "template";
     }
 
+    @Value("${server.port}")
+    private String port;
+
     @RequestMapping("/greeting")
     @ResponseBody
     String greet() {
+        System.out.println("port = "+ port);
         List<String> greetings = Arrays.asList("Hi there", "Greetings", "Salutations");
         Random rand = new Random();
         int randomNum = rand.nextInt(greetings.size());
