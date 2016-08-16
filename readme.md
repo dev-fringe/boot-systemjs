@@ -8,7 +8,7 @@
 - template 
 - cloud 
 - async application
-- programing paradigms  
+- programming paradigms  
 - distributed system
 - api document 
  
