@@ -1,4 +1,4 @@
-package dev.fringe;
+package dev.fringe.config;
 
 import org.atmosphere.cpr.AtmosphereServlet;
 import org.atmosphere.cpr.ContainerInitializer;

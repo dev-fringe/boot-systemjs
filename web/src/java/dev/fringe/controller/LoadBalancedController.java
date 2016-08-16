@@ -1,5 +1,6 @@
 package dev.fringe.controller;
 
+import dev.fringe.config.LoadBalancedConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;

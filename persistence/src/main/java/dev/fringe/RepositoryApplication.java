@@ -1,5 +1,7 @@
-package dev.fringe.repository;
+package dev.fringe;
 
+import dev.fringe.domain.Customer;
+import dev.fringe.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -24,7 +26,7 @@ public class RepositoryApplication {
     }
 
     @Bean
-    public CommandLineRunner demo(CustomerRepository  repository) {
+    public CommandLineRunner demo(CustomerRepository repository) {
         return (args) -> {
             // save a couple of customers
             repository.save(new Customer("Jack", "Bauer"));

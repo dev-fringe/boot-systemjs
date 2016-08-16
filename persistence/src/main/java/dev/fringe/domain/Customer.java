@@ -1,4 +1,4 @@
-package dev.fringe.repository;
+package dev.fringe.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
