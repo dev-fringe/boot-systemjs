@@ -1,4 +1,4 @@
-package dev.fringe;
+package dev.fringe.controller;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AvailabilityFilteringRule;
