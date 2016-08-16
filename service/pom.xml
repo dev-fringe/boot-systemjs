@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>dev.fringe</groupId>
-    <artifactId>service</artifactId>
+    <artifactId>services</artifactId>
     <version>1.0.0.RELEASE</version>
 
     <dependencies>

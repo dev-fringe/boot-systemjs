@@ -4,6 +4,7 @@ import dev.fringe.domain.Customer;
 import dev.fringe.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,39 +26,55 @@ public class RepositoryApplication {
         SpringApplication.run(RepositoryApplication.class);
     }
 
+    @Autowired
+    CustomerRepository repository;
+
     @Bean
-    public CommandLineRunner demo(CustomerRepository repository) {
+    public CommandLineRunner demo() {
         return (args) -> {
-            // save a couple of customers
-            repository.save(new Customer("Jack", "Bauer"));
-            repository.save(new Customer("Chloe", "O'Brian"));
-            repository.save(new Customer("Kim", "Bauer"));
-            repository.save(new Customer("David", "Palmer"));
-            repository.save(new Customer("Michelle", "Dessler"));
-
-            // fetch all customers
-            log.info("Customers found with findAll():");
-            log.info("-------------------------------");
-            for (Customer customer : repository.findAll()) {
-                log.info(customer.toString());
-            }
+            log.info("save a couple of customers");
+            save();
             log.info("");
-
-            // fetch an individual customer by ID
-            Customer customer = repository.findOne(1L);
-            log.info("Customer found with findOne(1L):");
-            log.info("--------------------------------");
-            log.info(customer.toString());
+            log.info("fetch all customers");
+            fetchAllCustomers();
             log.info("");
-
-            // fetch customers by last name
-            log.info("Customer found with findByLastName('Bauer'):");
-            log.info("--------------------------------------------");
-            for (Customer bauer : repository.findByLastName("Bauer")) {
-                log.info(bauer.toString());
-            }
+            log.info("fetch an individual customer by ID");
+            fetchCustomerById(1L);
+            log.info("");
+            log.info("fetch customers by last name");
+            fetchCustomersByLastName("Bauer");
             log.info("");
         };
     }
 
+    private void fetchCustomersByLastName(String lastName) {
+        // fetch customers by last name
+        for (Customer bauer : repository.findByLastName(lastName)) {
+            log.info(bauer.toString());
+        }
+    }
+
+    private void fetchCustomerById(long id) {
+        // fetch an individual customer by ID
+        Customer customer = repository.findOne(id);
+        log.info(customer.toString());
+        log.info("");
+    }
+
+    private void fetchAllCustomers() {
+        // fetch all customers
+        for (Customer customer : repository.findAll()) {
+            log.info(customer.toString());
+        }
+        log.info("");
+    }
+
+    private void save() {
+        // save a couple of customers
+        repository.save(new Customer("Jack", "Bauer"));
+        repository.save(new Customer("Chloe", "O'Brian"));
+        repository.save(new Customer("Kim", "Bauer"));
+        repository.save(new Customer("David", "Palmer"));
+        repository.save(new Customer("Michelle", "Dessler"));
+    }
 }
