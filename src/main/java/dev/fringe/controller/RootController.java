@@ -9,7 +9,7 @@ import java.util.*;
 
 
 @Controller
-public class RootController {
+public class HomeController {
 
     @Value("${application.message:Hello World}")
     private String message = "Hello World";
@@ -26,13 +26,13 @@ public class RootController {
         return "template";
     }
 
-    @Value("${server.port}")
-    private String port;
+    @Value("${spring.profiles}")
+    private String profile;
 
     @RequestMapping("/greeting")
     @ResponseBody
     String greet() {
-        System.out.println("port = "+ port);
+        System.out.println("profile = "+ profile + ", time  = " + new Date().getTime());
         List<String> greetings = Arrays.asList("Hi there", "Greetings", "Salutations");
         Random rand = new Random();
         int randomNum = rand.nextInt(greetings.size());
