@@ -2,7 +2,6 @@ package dev.fringe.domain;
 
 import lombok.Data;
 
-import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;

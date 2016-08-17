@@ -35,11 +35,9 @@ public class RepositoryApplicationMessage {
 
     @Bean
     public CommandLineRunner init() {
-        return (evt) -> Arrays.asList(
-                "jhoeller,dsyer,pwebb,ogierke,rwinch,mfisher,mpollack,jlong".split(","))
-                .forEach(a -> {
-                    repository.save(new Message(a));
-                    log.info(repository.findAll().toString());
-                });
+        String data = "jhoeller,dsyer,pwebb,ogierke,rwinch,mfisher,mpollack,jlong";
+        return (evt) -> Arrays.asList(data.split(",")).forEach(a -> {
+            repository.save(new Message(a));
+        });
     }
 }

@@ -58,7 +58,6 @@ public class RepositoryApplication {
         // fetch an individual customer by ID
         Customer customer = repository.findOne(id);
         log.info(customer.toString());
-        log.info("");
     }
 
     private void fetchAllCustomers() {
@@ -66,7 +65,6 @@ public class RepositoryApplication {
         for (Customer customer : repository.findAll()) {
             log.info(customer.toString());
         }
-        log.info("");
     }
 
     private void save() {
