@@ -2,15 +2,15 @@
 
 ## Application build and packaging manage
 
-## Frameworks 
+## Application framework 
 ### Backend
-- bootstrap application
+- bootstrap
 - template 
 - cloud 
-- async application
-- programming paradigms  
-- distributed system
-- api document 
+- async 
+- programming paradigm 
+- distribute
+- document 
  
 ### Frontend
 - ecmascript 

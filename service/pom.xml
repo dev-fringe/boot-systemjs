@@ -20,6 +20,11 @@
             <artifactId>spring-boot-starter-mustache</artifactId>
         </dependency>
         <dependency>
+            <groupId>dev.fringe</groupId>
+            <artifactId>persistence</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>1</version>
