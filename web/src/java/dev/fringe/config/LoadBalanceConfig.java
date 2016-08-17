@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * Created by v.hdlee on 2016-08-12.
  */
-public class LoadBalancedConfig {
+public class LoadBalanceConfig {
 
     @Autowired
     IClientConfig ribbonClientConfig;

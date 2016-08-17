@@ -10,22 +10,8 @@ import java.util.*;
 
 @Controller
 @Service
-public class HomeService {
-
-    @Value("${application.message:Hello World}")
-    private String message = "Hello World";
-
-    @RequestMapping("/")
-    String root() {
-        return "welcome";
-    }
-
-    @RequestMapping("/template")
-    String data(Map<String, Object> model) {
-        model.put("time", new Date());
-        model.put("message", this.message);
-        return "template";
-    }
+@RequestMapping("/api")
+public class ApiService {
 
     @Value("${spring.profiles}")
     private String profile;

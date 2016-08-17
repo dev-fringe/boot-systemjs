@@ -1,7 +1,9 @@
 package dev.fringe;
 
 import dev.fringe.domain.Customer;
+import dev.fringe.domain.Message;
 import dev.fringe.repository.CustomerRepository;
+import dev.fringe.repository.MessageRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,25 +11,38 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import java.util.Arrays;
 
 /**
  * Created by v.hdlee on 2016-08-16.
  */
 @SpringBootApplication
-@Configuration
-@ConfigurationProperties(locations={"classpath:application.yml"})
+@EnableJpaRepositories(basePackages = {"dev.fringe.repository.custom","dev.fringe.repository"})
 public class RepositoryApplication {
 
     private static final Logger log = LoggerFactory.getLogger(RepositoryApplication.class);
-
     public static void main(String[] args) {
         SpringApplication.run(RepositoryApplication.class);
     }
 
     @Autowired
-    CustomerRepository repository;
+    CustomerRepository customerRepository;
+
+    @Autowired
+    MessageRepository repository;
+
+    @Bean
+    public CommandLineRunner init() {
+        String data = "jhoeller,dsyer,pwebb,ogierke,rwinch,mfisher,mpollack,jlong";
+        return (evt) -> Arrays.asList(data.split(",")).forEach(a -> {
+            repository.save(new Message(a));
+        });
+    }
 
     @Bean
     public CommandLineRunner demo() {
@@ -49,30 +64,30 @@ public class RepositoryApplication {
 
     private void fetchCustomersByLastName(String lastName) {
         // fetch customers by last name
-        for (Customer bauer : repository.findByLastName(lastName)) {
+        for (Customer bauer : customerRepository.findByLastName(lastName)) {
             log.info(bauer.toString());
         }
     }
 
     private void fetchCustomerById(long id) {
         // fetch an individual customer by ID
-        Customer customer = repository.findOne(id);
+        Customer customer = customerRepository.findOne(id);
         log.info(customer.toString());
     }
 
     private void fetchAllCustomers() {
         // fetch all customers
-        for (Customer customer : repository.findAll()) {
+        for (Customer customer : customerRepository.findAll()) {
             log.info(customer.toString());
         }
     }
 
     private void save() {
         // save a couple of customers
-        repository.save(new Customer("Jack", "Bauer"));
-        repository.save(new Customer("Chloe", "O'Brian"));
-        repository.save(new Customer("Kim", "Bauer"));
-        repository.save(new Customer("David", "Palmer"));
-        repository.save(new Customer("Michelle", "Dessler"));
+        customerRepository.save(new Customer("Jack", "Bauer"));
+        customerRepository.save(new Customer("Chloe", "O'Brian"));
+        customerRepository.save(new Customer("Kim", "Bauer"));
+        customerRepository.save(new Customer("David", "Palmer"));
+        customerRepository.save(new Customer("Michelle", "Dessler"));
     }
 }

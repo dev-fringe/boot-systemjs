@@ -38,8 +38,6 @@ public class MessageService {
     public static class JacksonEncoderDecoder implements Encoder<Message, String>, Decoder<String, Message> {
 
         private final ObjectMapper mapper = new ObjectMapper();
-
-        @Override
         public String encode(Message m) {
             try {
                 return this.mapper.writeValueAsString(m);
@@ -47,8 +45,6 @@ public class MessageService {
                 throw new IllegalStateException(ex);
             }
         }
-
-        @Override
         public Message decode(String s) {
             try {
                 return this.mapper.readValue(s, Message.class);

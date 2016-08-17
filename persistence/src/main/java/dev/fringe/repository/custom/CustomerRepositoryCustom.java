@@ -9,5 +9,5 @@ import java.util.List;
  * Created by v.hdlee on 2016-08-17.
  */
 public interface CustomerRepositoryCustom {
-    List<Customer> batchOperation(Collection entities);
+//    List<Customer> myCustomBatchOperation();
 }

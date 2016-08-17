@@ -13,17 +13,30 @@
     <groupId>dev.fringe</groupId>
     <artifactId>persistence</artifactId>
     <version>1.0.0.RELEASE</version>
+    <!--<properties>-->
+        <!--<hibernate.version>5.2.1.Final</hibernate.version>-->
+     <!--</properties>-->
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <!--<exclusions>-->
+                 <!--<exclusion>-->
+                    <!--<groupId>org.hibernate</groupId>-->
+                     <!--<artifactId>hibernate-entitymanager</artifactId>-->
+                 <!--</exclusion>-->
+             <!--</exclusions>-->
         </dependency>
         <dependency>
             <groupId>dev.fringe</groupId>
             <artifactId>core</artifactId>
             <version>1.0.0.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+         </dependency>
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-mongodb</artifactId>
