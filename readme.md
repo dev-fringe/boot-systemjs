@@ -4,14 +4,10 @@
 
 ## Application framework 
 ### Backend
-- core
-`domain`,`profile`,`bootstrap`,`programming paradigm`
-- persistence
-`business data`,`store log(progress)`, `batch` 
-- service
-`async`,`document`,`distribute(progress)`
-- web
-`template`, `cloud`
+- core - `domain` `profile` `bootstrap` `programming paradigm`
+- persistence - `business data` `store log(progress)` `batch` 
+- service -`async` `document` `distribute(progress)`
+- web -`template` `cloud`
 
  
 ### Frontend
