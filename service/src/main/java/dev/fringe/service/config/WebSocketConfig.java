@@ -1,7 +1,8 @@
-package dev.fringe.config;
+package dev.fringe.service.config;
 
 import org.atmosphere.cpr.AtmosphereServlet;
 import org.atmosphere.cpr.ContainerInitializer;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -11,17 +12,20 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import java.util.Collections;
 
-@Configuration
-public  class ApiDocAndAsyncMessageConfig {
+/**
+ * Created by v.hdlee on 2016-08-18.
+ */
+@EnableAutoConfiguration
+public class WebSocketConfig {
     @Bean
     public EmbeddedAtmosphereInitializer atmosphereInitializer() {
         return new EmbeddedAtmosphereInitializer();
     }
-
     @Bean
     public ServletRegistrationBean atmosphereServlet() {
         ServletRegistrationBean registration = new ServletRegistrationBean(new AtmosphereServlet(), "/message/*");
@@ -36,10 +40,5 @@ public  class ApiDocAndAsyncMessageConfig {
         public void onStartup(ServletContext servletContext) throws ServletException {
             onStartup(Collections.<Class<?>> emptySet(), servletContext);
         }
-    }
-
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any()).paths(PathSelectors.any()).build();
     }
 }

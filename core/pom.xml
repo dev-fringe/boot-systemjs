@@ -14,4 +14,10 @@
     <artifactId>core</artifactId>
     <version>1.0.0.RELEASE</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    </dependencies>
 </project>

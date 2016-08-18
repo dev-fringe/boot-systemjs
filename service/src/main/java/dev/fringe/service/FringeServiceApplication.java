@@ -1,9 +1,8 @@
-package dev.fringe;
+package dev.fringe.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Profile;
 import org.springframework.test.context.ActiveProfiles;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.Arrays;

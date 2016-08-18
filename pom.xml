@@ -11,13 +11,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.0.M3</version>
+		<version>1.4.0.RELEASE</version>
 		<relativePath/>
 	</parent>
 	<modules>
 		<module>service</module>
 		<module>persistence</module>
 		<module>web</module>
+		<module>test</module>
 		<module>core</module>
 	</modules>
 	<dependencies>
