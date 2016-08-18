@@ -1,15 +1,11 @@
 package dev.fringe.atmosphere;
 
 import org.atmosphere.config.service.Disconnect;
-import org.atmosphere.config.service.Message;
 import org.atmosphere.config.service.Ready;
 import org.atmosphere.cpr.AtmosphereResource;
 import org.atmosphere.cpr.AtmosphereResourceEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.GenericTypeResolver;
-
-import java.io.IOException;
 
 /**
  * Created by v.hdlee on 2016-08-18.
