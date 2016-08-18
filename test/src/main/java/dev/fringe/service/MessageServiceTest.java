@@ -37,7 +37,7 @@ public class MessageServiceTest {
     private int port = 1234;
 
     @Test
-    public void chatEndpoint() throws Exception {
+    public void messageEndpoint() throws Exception {
         ConfigurableApplicationContext context = new SpringApplicationBuilder(ClientConfiguration.class, PropertyPlaceholderAutoConfiguration.class).properties("websocket.uri:ws://localhost:" + this.port + "/message").run("--spring.main.web_environment=false");
         long count = context.getBean(ClientConfiguration.class).latch.getCount();
         AtomicReference<String> messagePayloadReference = context.getBean(ClientConfiguration.class).messagePayload;
