@@ -28,19 +28,21 @@ public class LoadBalanceController {
     RestTemplate restTemplate;
 
     @RequestMapping("/{path}/{data}")
-    public String pathdata(@PathVariable String path, @PathVariable String data, @RequestParam(value="name", defaultValue="Artaban") String name) {
+    public String pathdata(@PathVariable String path, @PathVariable String data, @RequestParam(value="name", defaultValue="fringe") String name) {
         Map<String, String> params = new HashMap<String, String>();
         params.put("path", path);
         params.put("data", data);
-        String greeting = this.restTemplate.getForObject("http://fringe/{path}/{data}", String.class, params);
+        params.put("name", name);
+        String greeting = this.restTemplate.getForObject("http://{name}/{path}/{data}", String.class, params);
         return String.format("%s, %s!", greeting, name);
     }
 
     @RequestMapping("/{path}")
-    public String path(@PathVariable String path) {
+    public String path(@PathVariable String path, @RequestParam(value="name", defaultValue="fringe") String name) {
         Map<String, String> params = new HashMap<String, String>();
         params.put("path", path);
-        String greeting = this.restTemplate.getForObject("http://fringe/{path}", String.class, params);
+        params.put("name", name);
+        String greeting = this.restTemplate.getForObject("http://{name}/{path}", String.class, params);
         return String.format("%s, %s!", greeting, "sdd");
     }
 }

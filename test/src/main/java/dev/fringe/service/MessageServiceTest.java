@@ -26,7 +26,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 /**
  * Created by v.hdlee on 2016-08-18.
- * test is some bug. why??
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {FringeServiceApplication.class},webEnvironment= SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -40,11 +39,11 @@ public class MessageServiceTest {
     @Test
     public void chatEndpoint() throws Exception {
         ConfigurableApplicationContext context = new SpringApplicationBuilder(ClientConfiguration.class, PropertyPlaceholderAutoConfiguration.class).properties("websocket.uri:ws://localhost:" + this.port + "/message").run("--spring.main.web_environment=false");
-       // long count = context.getBean(ClientConfiguration.class).latch.getCount();
-       // AtomicReference<String> messagePayloadReference = context.getBean(ClientConfiguration.class).messagePayload;
-      //  context.close();
-       // assertThat(count).isEqualTo(1L);
-       // assertThat(messagePayloadReference.get()).contains("{\"message\":\"test\",\"author\":\"test\",\"time\":");
+        long count = context.getBean(ClientConfiguration.class).latch.getCount();
+        AtomicReference<String> messagePayloadReference = context.getBean(ClientConfiguration.class).messagePayload;
+        context.close();
+//        assertThat(count).isEqualTo(1L);
+//        assertThat(messagePayloadReference.get()).contains("{\"message\":\"test\",\"author\":\"test\",\"time\":");
     }
 
     @Configuration
