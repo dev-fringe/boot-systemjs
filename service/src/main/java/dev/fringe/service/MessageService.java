@@ -19,9 +19,11 @@ public class MessageService {
 
     private final Logger logger = LoggerFactory.getLogger(MessageService.class);
 
+    private Message message;
     @Ready
     public void onReady(final AtmosphereResource resource) {
         this.logger.info("Connected", resource.uuid());
+        message.setUuid(resource.uuid());
     }
 
     @Disconnect
@@ -32,6 +34,7 @@ public class MessageService {
     @org.atmosphere.config.service.Message(encoders = JacksonEncoderDecoder.class, decoders = JacksonEncoderDecoder.class)
     public Message onMessage(Message message) throws IOException {
         this.logger.info("Author {} sent message {}", message.getAuthor(),message.getMessage());
+        message.setUuid(this.message.getUuid());
         return message;
     }
 
