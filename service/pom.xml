@@ -15,7 +15,10 @@
     <version>1.0.0.RELEASE</version>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mustache</artifactId>
+        </dependency>
         <dependency>
             <groupId>dev.fringe</groupId>
             <artifactId>persistence</artifactId>
@@ -27,9 +30,19 @@
             <version>1.0.0.RELEASE</version>
         </dependency>
         <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+        <dependency>
             <groupId>org.atmosphere</groupId>
             <artifactId>atmosphere-runtime</artifactId>
             <version>2.4.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atmosphere</groupId>
+            <artifactId>atmosphere-spring</artifactId>
+            <version>2.4.2</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

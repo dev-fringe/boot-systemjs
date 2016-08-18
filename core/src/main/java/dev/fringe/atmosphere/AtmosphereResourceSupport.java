@@ -7,6 +7,8 @@ import org.atmosphere.cpr.AtmosphereResource;
 import org.atmosphere.cpr.AtmosphereResourceEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.GenericTypeResolver;
+
 import java.io.IOException;
 
 /**
@@ -26,9 +28,4 @@ public abstract class AtmosphereResourceSupport<T> {
         this.logger.info("Client {} disconnected [{}]", event.getResource().uuid(),(event.isCancelled() ? "cancelled" : "closed"));
     }
 
-    @Message(encoders = JacksonEncoderDecoder.class, decoders = JacksonEncoderDecoder.class)
-    public T onMessage(T t) throws IOException {
-        this.logger.info("sent message {}", t);
-        return t;
-    }
 }

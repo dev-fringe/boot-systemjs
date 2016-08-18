@@ -7,6 +7,10 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -35,5 +39,4 @@ public class WebSocketConfig {
         public void onStartup(ServletContext servletContext) throws ServletException {
             onStartup(Collections.<Class<?>> emptySet(), servletContext);
         }
-    }
-}
+    }}
