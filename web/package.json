@@ -13,8 +13,8 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "src/main/webapp",
-      "packages": "src/main/webapp/lib"
+      "baseURL": "src/main/resources/public",
+      "packages": "src/main/resources/public/lib"
     },
     "dependencies": {
       "css": "github:systemjs/plugin-css@^0.1.23",

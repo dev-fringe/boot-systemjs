@@ -17,7 +17,7 @@ public class MessageService {
 
     @org.atmosphere.config.service.Message(encoders = MessageEncoderDecoder.class, decoders = MessageEncoderDecoder.class)
     public Message onMessage(Message message) throws IOException {
-        ApiService chatService = SpringApplicationContext.getBean(ApiService.class);
+//        ApiService chatService = SpringApplicationContext.getBean(ApiService.class);
         this.logger.info("sent message {}", message);
         return message;
     }

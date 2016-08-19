@@ -9,7 +9,6 @@ export function bootstrap() {
       window.addEventListener('changestate', function(e) {
         console.log('URL changed');
       });
-
       window.history.pushState(null, null, '/template'); // `changestate` will be triggered
     }
     $.get("template", function(data){

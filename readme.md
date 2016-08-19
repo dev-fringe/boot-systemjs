@@ -8,7 +8,6 @@
 - persistence - `business data` `store log(progress)` `batch` 
 - service -`async` `document` `distribute(progress)`
 - web -`template` `loadbalence`
-
  
 ### Frontend
 - ecmascript 
