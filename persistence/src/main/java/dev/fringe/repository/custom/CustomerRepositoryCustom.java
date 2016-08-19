@@ -10,5 +10,5 @@ import java.util.List;
  * some bug.
  */
 public interface CustomerRepositoryCustom {
-    List<Customer> myCustomBatchOperation();
+//    List<Customer> myCustomBatchOperation();
 }

@@ -16,8 +16,8 @@ class CustomerRepositoryCustomImpl implements CustomerRepositoryCustom {
         this.em = em;
     }
 
-    @Override
-    public List<Customer> myCustomBatchOperation() {
-        return null;
-    }
+//    @Override
+//    public List<Customer> myCustomBatchOperation() {
+//        return null;
+//    }
 }
