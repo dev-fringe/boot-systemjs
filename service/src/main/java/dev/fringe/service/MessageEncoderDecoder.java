@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by v.hdlee on 2016-08-18.
  */
-public class JacksonEncoderDecoder implements Encoder<Message, String>, Decoder<String, Message> {
+public class MessageEncoderDecoder implements Encoder<Message, String>, Decoder<String, Message> {
     private final ObjectMapper mapper = new ObjectMapper();
     public String encode(Message m) {
         try {

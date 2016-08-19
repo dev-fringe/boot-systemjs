@@ -22,14 +22,17 @@
         <dependency>
             <groupId>dev.fringe</groupId>
             <artifactId>core</artifactId>
+            <version>1.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>dev.fringe</groupId>
             <artifactId>service</artifactId>
+            <version>1.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>dev.fringe</groupId>
             <artifactId>persistence</artifactId>
+            <version>1.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
