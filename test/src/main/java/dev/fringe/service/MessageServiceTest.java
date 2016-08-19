@@ -24,6 +24,9 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 /**
  * Created by v.hdlee on 2016-08-18.
  */
@@ -42,8 +45,8 @@ public class MessageServiceTest {
         long count = context.getBean(ClientConfiguration.class).latch.getCount();
         AtomicReference<String> messagePayloadReference = context.getBean(ClientConfiguration.class).messagePayload;
         context.close();
-//        assertThat(count).isEqualTo(1L);
-//        assertThat(messagePayloadReference.get()).contains("{\"message\":\"test\",\"author\":\"test\",\"time\":");
+        //assertThat(count).isEqualTo(1L);
+        //assertThat(messagePayloadReference.get()).contains("{\"message\":\"test\",\"author\":\"test\",\"time\":");
     }
 
     @Configuration
