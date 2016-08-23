@@ -7,10 +7,11 @@
 - core - `domain` `profile` `bootstrap` `programming paradigm`
 - persistence - `business data` `store log(progress)` `batch` 
 - service -`async` `document` `distribute(progress)`
-- web -`template` `loadbalence`
+- web -`template` `loadbalence`, `webjars`
  
 ### Frontend
 - ecmascript 
 - selector 
+- enterprise web app
 
 ## Further, i will use Spring Cloud Netflix or enterprise archtecture, if necessary
